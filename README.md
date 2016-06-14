@@ -2,7 +2,9 @@
 
 This repository contains example codes for the PIC18 microcontrollers. These codes are meant to help you get started with basic features of the PIC18 microcontrollers.
 
-### 1. Interfacing PIC18F46K22 with Arduino GSM/GPS Shield
+### 1. Interfacing PIC18F46K22 with Arduino GSM/GPRS Shield
+
+![Arduino GSM/GPRS Shield](https://raw.githubusercontent.com/usamamuneeb/PIC18-Examples/master/pic18-gsm/image.jpg "Arduino GSM/GPRS Shield")
 
 Example folder: [Click Here](https://github.com/usamamuneeb/PIC18-Examples/tree/master/pic18-gsm)
 
