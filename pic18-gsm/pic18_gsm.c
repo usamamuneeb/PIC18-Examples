@@ -53,33 +53,30 @@ char keyVal_f[] = "&";
 
 void sendSMS()
 {
-		int i;
+	int i;
 
-        //UART1_Write_Text("ATE0\r\nAT\r\nAT+CMGF = 1\r\nAT+CNMI=1,2,0,0,0\r\nAT+CMGS=\"+");
-
-		UART1_Write_Text("ATE0\r\n");
-		delay_ms(1000);
+        UART1_Write_Text("ATE0\r\n");
+	delay_ms(1000);
         UART1_Write_Text("AT\r\n");
         delay_ms(1000);
         UART1_Write_Text("AT+CMGF = 1\r\n");
         delay_ms(1000);
         UART1_Write_Text("AT+CNMI=1,2,0,0,0\r\n");
         delay_ms(1000);
-        UART1_Write_Text("AT+CMGS=\"+92");
+        UART1_Write_Text("AT+CMGS=\"+92"); // replace 92 with your country code (or prefix)
 
-
-		for (i=0; i<numLen; ++i) {
-			UART1_Write(numText[i]);
-		}
-
-		UART1_Write_Text("\"\r\n");
+	for (i=0; i<numLen; ++i) {
+		UART1_Write(numText[i]);
+	}
+	UART1_Write_Text("\"\r\n");
+	
         delay_ms(500);
 
-		for (i=0; i<smsLen; ++i) {
-			UART1_Write(smsText[i]);
-		}
-
+	for (i=0; i<smsLen; ++i) {
+		UART1_Write(smsText[i]);
+	}
         UART1_Write_text("\r\n");
+        
         UART1_Write(26);
 }
 
